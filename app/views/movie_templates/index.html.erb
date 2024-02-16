@@ -103,11 +103,13 @@
     <td>
       <%= movie.year %>
     </td>
-
-    <td>
-      
-        <%= movie.director%>
-     
+     <td>
+  <% if movie.director %>
+    <%= movie.director.name %>
+  <% else %>
+    Director not available
+  <% end %>
+</td>
     </td>
 
     <td>
