@@ -112,9 +112,11 @@
     Director
   </dt>
   <dd>
-    <%# if the_director != nil %>
-      <%= @the_movie.director %>
-   
+  <% if @the_movie.director %>
+    <%= @the_movie.director.name %>
+  <% else %>
+    Director not available
+  <% end %>
   </dd>
 
   <dt>
